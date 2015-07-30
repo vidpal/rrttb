@@ -85,17 +85,18 @@ to be edited by hand.
 RANKING CALCULATION
 ----------------------------------------------------
 
-How to calculate user influence on twitter:
+How to calculate user influence on twitter::
+
 1. followers_count - 0.7 * num
 2. retweet_count - 1.0 * num 
 3. listed_count - 0.2 * num # number of lists on which author name appears
 
-retweet count is obtained by adding number of retweets for the latest
+Retweet count is obtained by adding number of retweets for the latest
 50 (hardcoded) statuses.
 
 Whoever on the list has a greatest score is 5.0.
 
-Measure influence in relation to each other using proportions:::
+Measure influence in relation to each other using proportions::
 
   person a total score -> 5.0
   person b total score -> x
