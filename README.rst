@@ -95,11 +95,11 @@ retweet count is obtained by adding number of retweets for the latest
 
 Whoever on the list has a greatest score is 5.0.
 
-Measure influence in relation to each other using proportions:
+Measure influence in relation to each other using proportions:::
 
-| person a total score -> 5.0
-| person b total score -> x
-| x = (person b * 5.0) / person a  
+  person a total score -> 5.0
+  person b total score -> x
+  x = (person b * 5.0) / person a  
 
 On one side there are words used by influencers. On the other
 is mutable set of words in file content_config.json and other words
