@@ -41,7 +41,8 @@ and select option "Read, Write and Access direct messages".
 Next, open "Keys and Access Tokens" tab to get all
 keys for config.py.
 
-Populate variables in file config.py
+Populate variables in file config.py:
+
 | C_KEY = ""
 | C_SECRET = ""
 | A_TOKEN = ""
