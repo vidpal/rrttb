@@ -86,26 +86,41 @@ to be edited by hand.
 RANKING CALCULATION
 ----------------------------------------------------
 
-How to calculate user influence on twitter::
+Twitter user influence rank is a composite of following 
+products::
 
-1. followers_count - 0.7 * num
-2. retweet_count - 1.0 * num 
-3. listed_count - 0.2 * num # number of lists on which author name appears
+  followers_count: 0.7 * num
+  retweet_count:   1.0 * num 
+  listed_count:    0.2 * num # number of lists on which author name appears
 
-Retweet count is obtained by adding number of retweets for the latest
-50 (hardcoded) statuses.
+Retweet count is obtained by adding number of retweets for the last
+50 statuses.
 
-Whoever on the list has a greatest score is 5.0.
+User with a greatest composite score gets assign 5.0 rank.
 
-Measure influence in relation to each other using proportions::
+Ranks for other twitter users get derived from ratio to top influencer::
 
   person a total score -> 5.0
   person b total score -> x
   x = (person b * 5.0) / person a  
 
-On one side there are words used by influencers. On the other
-is mutable set of words in file content_config.json and other words
-pulled from Corpora project https://github.com/dariusk/corpora.
-In order to get greater number of matches from the two sets I 
-parse latest 100 (number hardcoded) statuses from each influencer.
+On every run the script creates classifying collection of words.
+These collection gets formed by matching words used by influencers
+in last 100 statuses and script own dictionary. 
 
+Script dynamic dictionary consist of mutable set of words in file 
+content_config.json and corporas from Corpora project 
+https://github.com/dariusk/corpora. Names of corporas utilized: "rooms", 
+"countries", "oceans", "seas", "rivers", "us_cities", "us_states", 
+"canada_provinces", "canada_territories", "english_cities", "english_towns", 
+"venues". Right now there is no configuration for corporas so you will have
+to change the code of extend_keywords_set_with_corpora() function in 
+pack/textworker.py file.
+
+Formula for word score::
+
+  number_of_occurrences*influencer_0_rank + number_of_occurrences*influencer_1_rank + ... 
+
+Formula for article rank::
+
+  word_0*number_of_occurrences*word_0_score + word_1*number_of_occurrences*word_1_score + ...  
