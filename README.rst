@@ -43,10 +43,10 @@ keys for config.py.
 
 Populate variables in file config.py:
 
-| C_KEY = ""
-| C_SECRET = ""
-| A_TOKEN = ""
-| A_TOKEN_SECRET = ""
+  | C_KEY = ""
+  | C_SECRET = ""
+  | A_TOKEN = ""
+  | A_TOKEN_SECRET = ""
 
 Head over to bitly.com and sign up for account.
 When authenticated visit https://bitly.com/a/oauth_apps 
