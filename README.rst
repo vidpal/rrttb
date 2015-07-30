@@ -20,9 +20,9 @@ DEPENDECIES
 Proven to work with Python v2.7.6 but any Python v2.x 
 should be fine. Refer to dependencies below. 
 
-Pycorpora v0.1.2 https://github.com/aparrish/pycorpora
-Feedparser v5.2.0 https://pypi.python.org/pypi/feedparser
-Tweepy v3.3.0 https://github.com/tweepy/tweepy 
+* Pycorpora v0.1.2 https://github.com/aparrish/pycorpora
+* Feedparser v5.2.0 https://pypi.python.org/pypi/feedparser
+* Tweepy v3.3.0 https://github.com/tweepy/tweepy 
 
 After completing installations above replace default
 oceans.json file which supposed to be located in
@@ -42,10 +42,10 @@ Next, open "Keys and Access Tokens" tab to get all
 keys for config.py.
 
 Populate variables in file config.py
-C_KEY = ""
-C_SECRET = ""
-A_TOKEN = ""
-A_TOKEN_SECRET = ""
+| C_KEY = ""
+| C_SECRET = ""
+| A_TOKEN = ""
+| A_TOKEN_SECRET = ""
 
 Head over to bitly.com and sign up for account.
 When authenticated visit https://bitly.com/a/oauth_apps 
@@ -97,13 +97,13 @@ Whoever on the list has a greatest score is 5.0.
 
 Measure influence in relation to each other using proportions:
 
-person a total score -> 5.0
-person b total score -> x
-x = (person b * 5.0) / person a  
+| person a total score -> 5.0
+| person b total score -> x
+| x = (person b * 5.0) / person a  
 
-On one side there are words used by influencers. One the other
+On one side there are words used by influencers. On the other
 is mutable set of words in file content_config.json and other words
 pulled from Corpora project https://github.com/dariusk/corpora.
-In order two get greater number of matches from the two sets I 
-parse latest 100 (hardcoded) statuses from each influencer.
+In order to get greater number of matches from the two sets I 
+parse latest 100 (number hardcoded) statuses from each influencer.
 
