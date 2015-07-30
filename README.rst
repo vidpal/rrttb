@@ -14,7 +14,7 @@ It is recommended to run this script not more than two
 times a day since caching of RSS feeds is not implemented.
 
 ----------------------------------------------------
-DEPENDECIES
+DEPENDENCIES
 ----------------------------------------------------
 
 Proven to work with Python v2.7.6 but any Python v2.x 

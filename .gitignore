@@ -1,0 +1,5 @@
+*.pyc
+*.swp
+
+feeds.db
+influencers_ranks.db
